@@ -17,4 +17,6 @@ set -o nounset -o pipefail
 DIR=$1
 
 cd $DIR/packaging
-make
+export BUILD_NUMBER=1
+make clean
+make rpm deb
