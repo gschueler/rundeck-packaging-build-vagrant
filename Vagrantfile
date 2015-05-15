@@ -21,6 +21,6 @@ Vagrant.configure("2") do |config|
     #end
 
     #config.vm.provision :shell, :path => "build.sh", :args=> SRC_DIR
-    config.vm.provision :shell, :path => "make_packaging.sh", :args=> SRC_DIR
+    config.vm.provision :shell, :path => "make_packaging.sh", :args=> "#{SRC_DIR} #{ENV['BUILD_NUMBER']}"
 
 end
